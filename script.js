@@ -23,3 +23,28 @@ function generate() {
     }
 }
 generate();
+
+
+//drawing colors
+const etchColoring = document.querySelectorAll('.etch-child');
+
+//go through each child, set background color.
+etchColoring.forEach((child) => {
+    child.addEventListener('mouseover', function (event) {
+        event.target.style.backgroundColor = "black";
+    })
+});
+
+
+//color and clear selectors
+const blackColor = "black";
+const blueColor = "blue";
+const rainbowColor = "red";
+const clearAll = "clear";
+
+
+// test.forEach(function(event) {
+//     event.addEventListener('mouseover', (function(addColor){
+//         addColor.style.backgroundColor = "black";
+//     }))
+// });

@@ -24,3 +24,7 @@ using flexbox, need to calculate the number of grid items and divide it by the t
 // divide pixels available by slider input^2
 // take square root to get width/height? (seems to work)
 // Math.sqrt((147456 / 16 ** 2));
+
+//how to color:
+//user hovers over the div
+//change the background color
