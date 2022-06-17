@@ -7,10 +7,12 @@ Etch-a-Sketch project in vanilla JS.
 3.) add 16x16 divs inside a box in HTML   [X]
 4.) Style                                 [X]
 5.) Add Javascript procedural generation  [X]
-6.) Listener functionality for hover      []
-7.) Color changes (blue, rainbow)         []
-8.) Clear Button                          []
+6.) Listener functionality for hover      [X]
+7.) Color changes (blue)                  [X]
+8.) Clear Button                          [X]
 9.) Slider for new grid                   []
+10.) Add transform for btn when clicked   [X]
+11.) Rainbow color calculator             []
 
 
 ### Notes ###
@@ -24,7 +26,3 @@ using flexbox, need to calculate the number of grid items and divide it by the t
 // divide pixels available by slider input^2
 // take square root to get width/height? (seems to work)
 // Math.sqrt((147456 / 16 ** 2));
-
-//how to color:
-//user hovers over the div
-//change the background color
