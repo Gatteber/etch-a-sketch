@@ -1,8 +1,130 @@
 body {
     background-color: #a9a9a9;
 }
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
 h1 {
     font-family: 'Monofett', cursive;
     font-size: 80px;
     font-weight: bold;
 }
+
+.main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body-textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body-content {
+    display: flex;
+    gap: 150px;
+}
+
+.settings-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.black-btn {
+    background-color: black;
+    border: 1px solid lightgray;
+    height: 24px;
+    width: 120px;
+}
+
+.blue-btn {
+    background-color: blue;
+    border: 1px solid lightgray;
+    height: 24px;
+    width: 120px;
+}
+
+.rainbow-btn {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    border: 1px solid lightgray;
+    height: 24px;
+    width: 120px;
+}
+
+.clear-btn {
+    background-color: lightgray;
+    border: 1px solid black;
+    height: 48px;
+    width: 120px;
+}
+
+.etch-box {
+    height: 384px;
+    width: 384px;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.5);
+
+}
+
+.etch-child {
+    /*size: absolute;*/
+    /* width: 32%;
+        &::before {
+            content: '';
+            display: block;
+            padding-top: 100%;
+ 
+        }*/
+width: 24px;
+height: 24px;
+min-width: 0;
+}
+
+.etch-child:nth-child(2n+1) {
+    background: pink;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
