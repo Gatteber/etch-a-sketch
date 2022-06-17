@@ -78,16 +78,8 @@ h1 {
 }
 
 .etch-child {
-    /*size: absolute;*/
-    /* width: 32%;
-        &::before {
-            content: '';
-            display: block;
-            padding-top: 100%;
- 
-        }*/
-width: 24px;
-height: 24px;
+/*width: 24px;
+height: 24px;*/
 min-width: 0;
 }
 
