@@ -10,10 +10,9 @@ Etch-a-Sketch project in vanilla JS.
 6.) Listener functionality for hover      [X]
 7.) Color changes (blue)                  [X]
 8.) Clear Button                          [X]
-9.) Slider for new grid                   []
+9.) Slider for new grid                   [X]
 10.) Add transform for btn when clicked   [X]
-11.) Rainbow color calculator             []
-
+11.) Rainbow color calculator             [X]
 
 ### Notes ###
 using flexbox, need to calculate the number of grid items and divide it by the total space for the slider.

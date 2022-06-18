@@ -24,28 +24,58 @@ function generate() {
 }
 generate();
 
+//resize box
+function removeAllChildNodes (parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+};
+const etchRemove = document.querySelector('.etch-box');
+const resizeButton = document.querySelector('.go-btn');
+resizeButton.addEventListener("click", function () {
+    removeAllChildNodes(etchRemove);
+    generate();
+    const etchColoring = document.querySelectorAll('.etch-child');
+    etchColoring.forEach((child) => {
+        child.addEventListener('mouseover', function (event) {
+        event.target.style.backgroundColor = mouseColor;
+    })//go through each child, set background color.
+});
+});
+
 
 //drawing colors
 const etchColoring = document.querySelectorAll('.etch-child');
-
-//go through each child, set background color.
 etchColoring.forEach((child) => {
     child.addEventListener('mouseover', function (event) {
         event.target.style.backgroundColor = mouseColor;
-    })
+    })//go through each child, set background color.
 });
 
 
 //color and clear selectors
 let mouseColor = "black";
-const blackColor = "black";
-const blueColor = "blue";
-const rainbowColor = getRandomColor();
-const clearAll = "clear";
 const changeBlack = document.querySelector('.black-btn');
 const changeBlue = document.querySelector('.blue-btn');
 const changeRainbow = document.querySelector('.rainbow-btn');
 const clearPad = document.querySelector('.clear-btn');
+
+changeBlack.addEventListener("click", function() {
+    let etchColoring = document.querySelectorAll('.etch-child');
+    etchColoring.forEach((child) => {
+        child.addEventListener('mouseover', function (event) {
+            event.target.style.backgroundColor = "black";
+        })//set black color.
+});
+});
+changeBlue.addEventListener("click", function() {
+    let etchColoring = document.querySelectorAll('.etch-child');
+    etchColoring.forEach((child) => {
+        child.addEventListener('mouseover', function (event) {
+            event.target.style.backgroundColor = "blue";
+        })//set black color.
+});
+});
 
 //rainbow
 function getRandomColor () {
@@ -55,24 +85,20 @@ function getRandomColor () {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-}
-
-
-changeBlack.addEventListener("click", function() {
-    mouseColor = blackColor;
-    console.log("I was clicked!!");
-});
-changeBlue.addEventListener("click", function() {
-    mouseColor = blueColor;
-    console.log("I was clicked!!");
-});
+};
 changeRainbow.addEventListener("click", function() {
-    mouseColor = rainbowColor;
-    console.log("I was clicked!!");//need to add rainbow coloring.
+    let etchColoring = document.querySelectorAll('.etch-child');
+    etchColoring.forEach((child) => {
+        child.addEventListener('mouseover', function (event) {
+            event.target.style.backgroundColor = getRandomColor();
+        })//set rainbow background color.
+    });
 });
+
+//clear
 clearPad.addEventListener("click", function() {
-    for (i = 0; i < etchColoring.length; i++) {
-        etchColoring[i].style.backgroundColor = "white";
+    let eraser = document.querySelectorAll('.etch-child');
+    for (i = 0; i < eraser.length; i++) {
+        eraser[i].style.backgroundColor = "white";
     } //loops through children and sets to white.
 });
-
