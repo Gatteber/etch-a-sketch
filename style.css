@@ -68,10 +68,21 @@ button:hover {
 }
 
 .clear-btn {
-    background-color: lightgray;
+    background-color: #d3d3d3;
     border: 1px solid black;
     height: 48px;
     width: 120px;
+}
+
+.numbers-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.go-btn {
+    background-color: #d3d3d3;
+    border: none;
 }
 
 .etch-box {
@@ -87,14 +98,8 @@ button:hover {
 }
 
 .etch-child {
-/*width: 24px;
-height: 24px;*/
 min-width: 0;
 }
-
-/*.etch-child:nth-child(2n+1) {
-    background: pink;
-}*/
 
 /* The slider itself */
 .slider {

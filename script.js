@@ -91,7 +91,7 @@ changeRainbow.addEventListener("click", function() {
     etchColoring.forEach((child) => {
         child.addEventListener('mouseover', function (event) {
             event.target.style.backgroundColor = getRandomColor();
-        })//set rainbow background color.
+        })//set rainbow color.
     });
 });
 
